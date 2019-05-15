@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "PositionHome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/Angular/UI/TreeView/treeview.component.js"></script>
+<script src="~/Scripts/Angular/Position/position.app.js"></script>
+<div ng-app="positionApp">
+    <div ng-controller="positionController">
+        <div class="row">
+            <div class="col">
+                <h3 class="mb-0">Manage Positions</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <select class="form-control input-md" ng-model="vars.selectedFirm" ng-if="data.firms.length > 0" ng-change="onFirmChange()">
+                    <option ng-repeat="firm in data.firms" value="{{firm.FirmId}}">{{firm.FirmName}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" ng-if="vars.selectedFirm > 0" style="background-color:mediumslateblue">
+                <div class="row">
+                    <div class="col">
+                        <h4 class="mb-0" style="color:whitesmoke">Positions</h4>
+                    </div>
+                    <div class="col text-right">
+                        <a href="" anchorhref="/Position/Add?firmId={{vars.selectedFirm}}" class="btn btn-sm btn-primary btn-icon" ng-click="addClick($event)"><div class="fas fa-plus"></div> Add New</a>
+                    </div>
+                </div>
+                <div class="tree-container">
+                    <treeview-node ng-if="data.positions != null && data.positions.length > 0" tree-list="data.positions" selected-firm="vars.selectedFirm" edit-base-url="'/Position/Edit?firmId='+vars.selectedFirm+'&positionId='" selected-node-id="{{vars.selectedNodeId}}" url="vars.editanchorhref"></treeview-node>
+                </div>
+            </div>
+            <div class="col-md-6" ng-include src="vars.addanchorhref" style="background-color:#5e72e4">
+            </div>
+            <div class="col-md-6" ng-include src="vars.editanchorhref" style="background-color:limegreen">
+            </div>
+        </div>
+    </div>
+</div>
+

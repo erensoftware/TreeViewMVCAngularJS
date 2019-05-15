@@ -1,0 +1,49 @@
+﻿table tbody tr td a.fa-pencil-alt {
+    color:white; 
+    border-radius:35%;
+    box-shadow: 2px 2px 2px gray;
+    background-color:limegreen; 
+    padding: 10px;
+}
+
+table tbody tr td a.fa-trash-alt {
+    color:white; 
+    border-radius:35%;
+    box-shadow: 2px 2px 2px gray;
+    background-color:#f5365c; 
+    padding: 10px;
+}
+
+table tbody tr td a.fa-plus {
+    color:white; 
+    border-radius:35%;
+    box-shadow: 2px 2px 2px gray;
+    background-color:cornflowerblue; 
+    padding: 10px;
+}
+
+table tbody tr td a.fa-list {
+    color:white; 
+    border-radius:35%;
+    box-shadow: 2px 2px 2px gray;
+    background-color: darkblue; 
+    padding: 10px;
+}
+
+.tree-collapsed {
+    color:whitesmoke;
+    display: none;
+}
+
+.tree-expanded {
+    color:whitesmoke;
+    display: normal;
+}
+
+.tree-node-selected {
+    color:white; 
+    border-radius:0.375rem; 
+    box-shadow: 2px 2px 2px gray;
+    background-color: darkblue; 
+    padding: 5px;
+}

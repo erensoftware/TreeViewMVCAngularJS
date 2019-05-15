@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeViewMVCAngularJS", "TreeViewMVCAngularJS\TreeViewMVCAngularJS.csproj", "{D844167E-7BEF-4819-8A39-1368FC53177A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeViewMVCAngularJS.Tests", "TreeViewMVCAngularJS.Tests\TreeViewMVCAngularJS.Tests.csproj", "{74FABE80-3C35-46C9-A5CC-F65EE3EDFD56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeViewMVCAngularJS.Entity", "TreeViewMVCAngularJS.Entity\TreeViewMVCAngularJS.Entity.csproj", "{BFC9CCC4-5621-449E-9138-B0986B282EFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeViewMVCAngularJS.Repository", "TreeViewMVCAngularJS.Repository\TreeViewMVCAngularJS.Repository.csproj", "{312BAB11-24F0-42AA-B182-EE94CA99CC0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D844167E-7BEF-4819-8A39-1368FC53177A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D844167E-7BEF-4819-8A39-1368FC53177A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D844167E-7BEF-4819-8A39-1368FC53177A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D844167E-7BEF-4819-8A39-1368FC53177A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74FABE80-3C35-46C9-A5CC-F65EE3EDFD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74FABE80-3C35-46C9-A5CC-F65EE3EDFD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74FABE80-3C35-46C9-A5CC-F65EE3EDFD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74FABE80-3C35-46C9-A5CC-F65EE3EDFD56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC9CCC4-5621-449E-9138-B0986B282EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC9CCC4-5621-449E-9138-B0986B282EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC9CCC4-5621-449E-9138-B0986B282EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC9CCC4-5621-449E-9138-B0986B282EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{312BAB11-24F0-42AA-B182-EE94CA99CC0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{312BAB11-24F0-42AA-B182-EE94CA99CC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{312BAB11-24F0-42AA-B182-EE94CA99CC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{312BAB11-24F0-42AA-B182-EE94CA99CC0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

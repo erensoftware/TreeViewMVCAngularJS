@@ -1,0 +1,10 @@
+﻿<ul style="list-style: none">
+    <li class="tree-node" ng-repeat="treeNode in $ctrl.treeList">
+        <div>
+            <a href="" class="fa fa-angle-right" style="color:whitesmoke" ng-click="$ctrl.collapseClick($event)" nodeid="{{treeNode.NodeId}}"></a>
+            <a href="" anchorhref="{{$ctrl.editBaseUrl + treeNode.NodeId}}" ng-click="$ctrl.click($event)" style="color:whitesmoke">{{treeNode.NodeName}}</a>
+        </div>
+        <treeview-node class="tree-collapsed" ng-if="treeNode.Children != null && treeNode.Children.length > 0" tree-list="treeNode.Children" selected-firm="$ctrl.selectedFirm" edit-base-url="$ctrl.editBaseUrl" selected-node-id="$ctrl.selectedNodeId" url="$ctrl.url" nodeid="{{treeNode.NodeId}}">
+        </treeview-node>
+    </li>
+</ul>

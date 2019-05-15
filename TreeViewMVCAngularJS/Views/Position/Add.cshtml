@@ -1,0 +1,49 @@
+﻿@using TreeViewMVCAngularJS.Models
+@model PositionViewModel
+
+<form id="addPositionForm" ng-submit="submitAddForm()">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(t => t.ParentId)
+    <fieldset>
+        <!-- Form Name -->
+        <legend>Add New Position</legend>
+            <!-- Text input-->
+            <div class="form-group row">
+                <label class="col-md-2 control-label">@Html.DisplayNameFor(t => t.PositionName)</label>
+                <div class="col-md-2">
+                    @Html.TextBoxFor(t => t.PositionName, new { @placeholder = "Position Name", @class = "form-control input-md", @required = "" })
+                    <div class="text-red">
+                        @Html.ValidationMessageFor(t => t.PositionName)
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2 control-label">@Html.DisplayNameFor(t => t.Department)</label>
+                <div class="col-md-2">
+                    @Html.DropDownListFor(t => t.DepartmentId, Model.DepartmentList, "Select Department", new { @class = "form-control input-md", @required = "" })
+                    <div class="text-red">
+                        @Html.ValidationMessageFor(t => t.DepartmentId)
+                    </div>
+                </div>
+            </div>
+            <!-- Check input-->
+            <div class="form-group row">
+                <label class="col-md-2 control-label">@Html.DisplayNameFor(t => t.IsActive)</label>
+                <div class="col-md-2">
+                    @Html.CheckBox("IsActive", true)
+                    <div class="text-red">
+                        @Html.ValidationMessageFor(t => t.IsActive)
+                    </div>
+                </div>
+            </div>
+            <!-- Button -->
+            <div class="form-group row">
+                <label class="col-md-2 control-label" for="btnSave"></label>
+                <div class="col-md-2">
+                    <button id="btnSave" name="Save" class="btn btn-info">Save</button>
+                </div>
+            </div>
+    </fieldset>
+</form>
+
