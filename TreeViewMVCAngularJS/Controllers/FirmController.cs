@@ -21,5 +21,10 @@ namespace TreeViewMVCAngularJS.Controllers
             var list = _firmRep.GetAll();
             return View(list.AsEnumerable());
         }
+        public ActionResult Add()
+        {
+            return View();
+        }
+
     }
 }

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyTreeViewDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirmId" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Firm" Relationship="Self.FK_Department_Firm" FromRole="Department" ToRole="Firm" />
+    <NavigationProperty Name="Position" Relationship="Self.FK_Position_Department" FromRole="Department" ToRole="Position" />
+  </EntityType>
+  <EntityType Name="Firm">
+    <Key>
+      <PropertyRef Name="FirmId" />
+    </Key>
+    <Property Name="FirmId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirmName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Department" Relationship="Self.FK_Department_Firm" FromRole="Firm" ToRole="Department" />
+  </EntityType>
+  <EntityType Name="Position">
+    <Key>
+      <PropertyRef Name="PositionId" />
+    </Key>
+    <Property Name="PositionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PositionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentId" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="SuperiorId" Type="Int32" />
+    <NavigationProperty Name="Department" Relationship="Self.FK_Position_Department" FromRole="Position" ToRole="Department" />
+    <NavigationProperty Name="Position1" Relationship="Self.FK_Position_Superior" FromRole="Position" ToRole="Position1" />
+    <NavigationProperty Name="Position2" Relationship="Self.FK_Position_Superior" FromRole="Position1" ToRole="Position" />
+  </EntityType>
+  <Association Name="FK_Department_Firm">
+    <End Role="Firm" Type="Self.Firm" Multiplicity="0..1" />
+    <End Role="Department" Type="Self.Department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Firm">
+        <PropertyRef Name="FirmId" />
+      </Principal>
+      <Dependent Role="Department">
+        <PropertyRef Name="FirmId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Position_Department">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Position" Type="Self.Position" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="Position">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Position_Superior">
+    <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
+    <End Role="Position1" Type="Self.Position" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Position">
+        <PropertyRef Name="PositionId" />
+      </Principal>
+      <Dependent Role="Position1">
+        <PropertyRef Name="SuperiorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MyTreeViewDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Department" EntityType="Self.Department" />
+    <EntitySet Name="Firm" EntityType="Self.Firm" />
+    <EntitySet Name="Position" EntityType="Self.Position" />
+    <AssociationSet Name="FK_Department_Firm" Association="Self.FK_Department_Firm">
+      <End Role="Firm" EntitySet="Firm" />
+      <End Role="Department" EntitySet="Department" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Position_Department" Association="Self.FK_Position_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Position" EntitySet="Position" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Position_Superior" Association="Self.FK_Position_Superior">
+      <End Role="Position" EntitySet="Position" />
+      <End Role="Position1" EntitySet="Position" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

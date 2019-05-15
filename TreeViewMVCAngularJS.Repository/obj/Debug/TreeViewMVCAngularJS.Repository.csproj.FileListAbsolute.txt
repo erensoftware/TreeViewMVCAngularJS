@@ -1,0 +1,12 @@
+D:\Visual Studio 2015\Projects\TreeViewMVCAngularJS\TreeViewMVCAngularJS.Repository\bin\Debug\TreeViewMVCAngularJS.Repository.dll.config
+D:\Visual Studio 2015\Projects\TreeViewMVCAngularJS\TreeViewMVCAngularJS.Repository\bin\Debug\TreeViewMVCAngularJS.Repository.dll
+D:\Visual Studio 2015\Projects\TreeViewMVCAngularJS\TreeViewMVCAngularJS.Repository\bin\Debug\TreeViewMVCAngularJS.Repository.pdb
+D:\Visual Studio 2015\Projects\TreeViewMVCAngularJS\TreeViewMVCAngularJS.Repository\bin\Debug\EntityFramework.dll
+D:\Visual Studio 2015\Projects\TreeViewMVCAngularJS\TreeViewMVCAngularJS.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\Visual Studio 2015\Projects\TreeViewMVCAngularJS\TreeViewMVCAngularJS.Repository\bin\Debug\TreeViewMVCAngularJS.Entity.dll
+D:\Visual Studio 2015\Projects\TreeViewMVCAngularJS\TreeViewMVCAngularJS.Repository\bin\Debug\TreeViewMVCAngularJS.Entity.pdb
+D:\Visual Studio 2015\Projects\TreeViewMVCAngularJS\TreeViewMVCAngularJS.Repository\bin\Debug\EntityFramework.xml
+D:\Visual Studio 2015\Projects\TreeViewMVCAngularJS\TreeViewMVCAngularJS.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\Visual Studio 2015\Projects\TreeViewMVCAngularJS\TreeViewMVCAngularJS.Repository\obj\Debug\TreeViewMVCAngularJS.Repository.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2015\Projects\TreeViewMVCAngularJS\TreeViewMVCAngularJS.Repository\obj\Debug\TreeViewMVCAngularJS.Repository.dll
+D:\Visual Studio 2015\Projects\TreeViewMVCAngularJS\TreeViewMVCAngularJS.Repository\obj\Debug\TreeViewMVCAngularJS.Repository.pdb
